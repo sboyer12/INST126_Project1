@@ -24,6 +24,10 @@ their turn ends.
 import os
 import random
 
+# this is how we view our dice
+die_sides = (1, 2, 3, 4, 5, 6)
+random.choice(die_sides)
+
 #this is the start of the function where we see how many players are going. I didn't like this one so I am not using it.
 '''
 players = input("How many people are playing? \n")
@@ -39,10 +43,17 @@ elif players > 2:
 players = []
 
 print("Hello World! \n")   # this satisfies one of the points
-print("welcome to the Tuple Out Dice Game!! \n") # intro to the game
+print("welcome to the Tuple Out Dice Game!! \n") # intro to the game\
 
-die_sides = (1, 2, 3, 4, 5, 6)
-random.choice(die_sides)
+# this while statement allows me to take all players and put their names into the list
+while True:
+    name = input("Enter Player name (): \n")
+
+    players.append(name)
+
+print(f"\n Number of players: {len(players)} \n") # len shows the length of the function. So it reads how many playesr are in our player list
+
+input("Press Enter to Start the game.")
 
 
 
