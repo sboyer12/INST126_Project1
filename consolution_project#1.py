@@ -33,11 +33,12 @@ die3_sides = (1, 2, 3, 4, 5, 6)
 
 # these are the functions for how we roll the dice
 def roll1dice():
-    return random.choice(die1_sides)
-def roll1dice():
-    return random.choice(die2_sides)
-def roll3dice():
-    return random.choice(die3_sides)
+    return random.choice(die1_sides) + random.choice(die2_sides) + random.choice(die3_sides)
+    
+#def roll2dice():
+    
+#def roll3dice():
+    
 
 #this is the start of the function where we see how many players are going. I didn't like this one so I am not using it.
 '''
@@ -72,7 +73,16 @@ input("Press Enter to Start the game.")
 for name in players:
     print(f"\n{name} its your move!")
     points = 0
+    while True:
+        print("Press enter to continue\n")
+        dice = roll1dice
+        print(f"\n You rolled a {roll1dice}!")
 
+        if points == [3, 6, 9, 12, 15, 18]:
+            break
+        else:
+            points += sum(dice)
+            print(f"\n you have {points} many points")
 
 
 
