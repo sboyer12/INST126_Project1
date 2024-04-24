@@ -25,8 +25,19 @@ import os
 import random
 
 # this is how we view our dice
-die_sides = (1, 2, 3, 4, 5, 6)
-random.choice(die_sides)
+die1_sides = (1, 2, 3, 4, 5, 6)
+
+die2_sides = (1, 2, 3, 4, 5, 6)
+
+die3_sides = (1, 2, 3, 4, 5, 6)
+
+# these are the functions for how we roll the dice
+def roll1dice():
+    return random.choice(die1_sides)
+def roll1dice():
+    return random.choice(die2_sides)
+def roll3dice():
+    return random.choice(die3_sides)
 
 #this is the start of the function where we see how many players are going. I didn't like this one so I am not using it.
 '''
@@ -47,13 +58,21 @@ print("welcome to the Tuple Out Dice Game!! \n") # intro to the game\
 
 # this while statement allows me to take all players and put their names into the list
 while True:
-    name = input("Enter Player name (): \n")
+    name = input("Enter player names! Type 'done' to start the game: \n")
+
+    if name.lower() == 'done':
+        break
 
     players.append(name)
 
 print(f"\n Number of players: {len(players)} \n") # len shows the length of the function. So it reads how many playesr are in our player list
 
 input("Press Enter to Start the game.")
+
+for name in players:
+    print(f"\n{name} its your move!")
+    points = 0
+
 
 
 
